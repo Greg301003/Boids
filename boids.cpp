@@ -44,3 +44,10 @@ double Boid::Distance(Boid const& b1, Boid const& b2) {
 Vector2d Boid::GetPosition(Boid const& b) { return b.position_; }
 
 Vector2d Boid::GetVelocity(Boid const& b) { return b.velocity_; }
+
+
+
+
+
+//graphic 
+

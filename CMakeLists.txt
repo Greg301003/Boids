@@ -15,7 +15,8 @@ string(APPEND CMAKE_CXX_FLAGS " -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS_DEBUG " -fsanitize=address,undefined -fno-omit-frame-pointer")
 string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined -fno-omit-frame-pointer")
 
-find_package(SFML COMPONENTS graphics REQUIRED)
+find_package(SFML 2.5.1 COMPONENTS graphics REQUIRED)
 
 add_executable(boids boids.cpp)
 target_link_libraries(boids sfml-graphics)
+

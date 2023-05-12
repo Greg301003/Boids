@@ -92,9 +92,9 @@ boids_EXTERNAL_OBJECTS =
 
 boids: CMakeFiles/boids.dir/boids.cpp.o
 boids: CMakeFiles/boids.dir/build.make
-boids: /Library/Frameworks/./sfml-graphics.framework/Versions/2.5.1/sfml-graphics
-boids: /Library/Frameworks/./sfml-window.framework/Versions/2.5.1/sfml-window
-boids: /Library/Frameworks/./sfml-system.framework/Versions/2.5.1/sfml-system
+boids: /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib
+boids: /opt/homebrew/lib/libsfml-window.2.5.1.dylib
+boids: /opt/homebrew/lib/libsfml-system.2.5.1.dylib
 boids: CMakeFiles/boids.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/greg/labs/Boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable boids"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boids.dir/link.txt --verbose=$(VERBOSE)
