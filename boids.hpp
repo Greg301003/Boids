@@ -21,7 +21,7 @@ class Boid {
 
   // modifico i nomi
  public:
-// constructor
+  // constructor
   Boid(Vector2d const& pos, Vector2d const& vel, Vector2d const& acc);
 
   // per accedere a posizione e velocità dall'esterno
