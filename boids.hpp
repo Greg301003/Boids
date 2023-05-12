@@ -18,8 +18,7 @@ class Boid {
   Vector2d velocity_{};
 
  public:
-  Boid(Vector2d p, Vector2d v, Vector2d a)
-      : position_{p}, velocity_{v} {}
+  Boid(Vector2d p, Vector2d v, Vector2d a) : position_{p}, velocity_{v} {}
 
   Vector2d GetPosition(Boid const&);
   Vector2d GetVelocity(Boid const&);
