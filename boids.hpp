@@ -24,6 +24,10 @@ class Boid {
   // per accedere a posizione e velocità dall'esterno
   Vector2d GetPosition(Boid const&);
   Vector2d GetVelocity(Boid const&);
+  // dichiaro la distanza tra due boids
+
+  double Distance(Boid const& b1, Boid const& b2);
 };
+
 
 #endif
