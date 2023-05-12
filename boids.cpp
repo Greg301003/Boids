@@ -28,6 +28,19 @@ double Vector2d::length(Vector2d const& v) {
   return {std::sqrt(v.x * v.x + v.y * v.y)};
 }
 
+
+//def distance
+
+
+
+double Boid::Distance(Boid const& b1, Boid const& b2) {
+  double dx = b1.position_.x - b2.position_.x;
+  double dy = b1.position_.y - b2.position_.y;
+  return std::sqrt(dx * dx + dy * dy);
+}
+
+//def getpos and getvel
+
 Vector2d Boid::GetPosition(Boid const& b) { return b.position_; }
 
 Vector2d Boid::GetVelocity(Boid const& b) { return b.velocity_; }

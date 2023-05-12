@@ -28,6 +28,4 @@ class Boid {
 
   double Distance(Boid const& b1, Boid const& b2);
 };
-
-
 #endif

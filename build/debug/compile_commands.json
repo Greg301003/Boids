@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/greg/labs/Boids/build/debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -iframework /Library/Frameworks  -Wall -Wextra -O3 -DNDEBUG -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -F/Library/Frameworks/.  -std=gnu++17 -o CMakeFiles/boids.dir/boids.cpp.o -c /Users/greg/labs/Boids/boids.cpp",
+  "file": "/Users/greg/labs/Boids/boids.cpp"
+}
+]
