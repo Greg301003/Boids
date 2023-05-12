@@ -358,6 +358,8 @@ CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/Boids/boids.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/math.h
 
+CMakeFiles/boids.dir/main.cpp.o: /Users/greg/labs/Boids/main.cpp
+
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/math.h:
 
@@ -866,6 +868,8 @@ CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/Boids/boids.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_uint8_t.h:
+
+/Users/greg/labs/Boids/main.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/string.h:
 
