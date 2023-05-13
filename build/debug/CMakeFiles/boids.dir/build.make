@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.25.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/greg/labs/Boids
+CMAKE_SOURCE_DIR = /Users/greg/labs/boids
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/greg/labs/Boids/build/debug
+CMAKE_BINARY_DIR = /Users/greg/labs/boids/build/debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/boids.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/boids.dir/progress.make
 include CMakeFiles/boids.dir/flags.make
 
 CMakeFiles/boids.dir/boids.cpp.o: CMakeFiles/boids.dir/flags.make
-CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/Boids/boids.cpp
+CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/boids/boids.cpp
 CMakeFiles/boids.dir/boids.cpp.o: CMakeFiles/boids.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/greg/labs/Boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/boids.dir/boids.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/boids.cpp.o -MF CMakeFiles/boids.dir/boids.cpp.o.d -o CMakeFiles/boids.dir/boids.cpp.o -c /Users/greg/labs/Boids/boids.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/greg/labs/boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/boids.dir/boids.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/boids.cpp.o -MF CMakeFiles/boids.dir/boids.cpp.o.d -o CMakeFiles/boids.dir/boids.cpp.o -c /Users/greg/labs/boids/boids.cpp
 
 CMakeFiles/boids.dir/boids.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/boids.dir/boids.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/Boids/boids.cpp > CMakeFiles/boids.dir/boids.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/boids/boids.cpp > CMakeFiles/boids.dir/boids.cpp.i
 
 CMakeFiles/boids.dir/boids.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/boids.dir/boids.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/Boids/boids.cpp -o CMakeFiles/boids.dir/boids.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/boids/boids.cpp -o CMakeFiles/boids.dir/boids.cpp.s
 
 CMakeFiles/boids.dir/main.cpp.o: CMakeFiles/boids.dir/flags.make
-CMakeFiles/boids.dir/main.cpp.o: /Users/greg/labs/Boids/main.cpp
+CMakeFiles/boids.dir/main.cpp.o: /Users/greg/labs/boids/main.cpp
 CMakeFiles/boids.dir/main.cpp.o: CMakeFiles/boids.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/greg/labs/Boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/boids.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/main.cpp.o -MF CMakeFiles/boids.dir/main.cpp.o.d -o CMakeFiles/boids.dir/main.cpp.o -c /Users/greg/labs/Boids/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/greg/labs/boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/boids.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/main.cpp.o -MF CMakeFiles/boids.dir/main.cpp.o.d -o CMakeFiles/boids.dir/main.cpp.o -c /Users/greg/labs/boids/main.cpp
 
 CMakeFiles/boids.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/boids.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/Boids/main.cpp > CMakeFiles/boids.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/boids/main.cpp > CMakeFiles/boids.dir/main.cpp.i
 
 CMakeFiles/boids.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/boids.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/Boids/main.cpp -o CMakeFiles/boids.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/boids/main.cpp -o CMakeFiles/boids.dir/main.cpp.s
 
 # Object files for target boids
 boids_OBJECTS = \
@@ -112,7 +112,7 @@ boids: /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib
 boids: /opt/homebrew/lib/libsfml-window.2.5.1.dylib
 boids: /opt/homebrew/lib/libsfml-system.2.5.1.dylib
 boids: CMakeFiles/boids.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/greg/labs/Boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable boids"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/greg/labs/boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable boids"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boids.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/boids.dir/clean:
 .PHONY : CMakeFiles/boids.dir/clean
 
 CMakeFiles/boids.dir/depend:
-	cd /Users/greg/labs/Boids/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/greg/labs/Boids /Users/greg/labs/Boids /Users/greg/labs/Boids/build/debug /Users/greg/labs/Boids/build/debug /Users/greg/labs/Boids/build/debug/CMakeFiles/boids.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/greg/labs/boids/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/greg/labs/boids /Users/greg/labs/boids /Users/greg/labs/boids/build/debug /Users/greg/labs/boids/build/debug /Users/greg/labs/boids/build/debug/CMakeFiles/boids.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/boids.dir/depend
 

@@ -1,5 +1,5 @@
-CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/Boids/boids.cpp \
-  /Users/greg/labs/Boids/boids.hpp \
+CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/boids/boids.cpp \
+  /Users/greg/labs/boids/boids.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Window.hpp \
   /opt/homebrew/include/SFML/System.hpp \

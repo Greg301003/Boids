@@ -45,6 +45,8 @@ Vector2d Boid::GetVelocity(Boid const& b) { return b.velocity_; }
 
 // draw boid
 void Boid::Draw(sf::RenderWindow& window) const {
+  window.draw(shape_);
+  
   
 }
 
