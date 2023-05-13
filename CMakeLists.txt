@@ -20,3 +20,9 @@ find_package(SFML 2.5.1 COMPONENTS graphics REQUIRED)
 add_executable(boids boids.cpp main.cpp )
 target_link_libraries(boids sfml-graphics)
 
+if (BUILD_TESTING)
+
+  add_executable(boids.t boids.cpp boids.test.cpp)
+  add_test(NAME boids.t COMMAND boids.t)
+
+endif()
