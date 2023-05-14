@@ -18,6 +18,9 @@
   }
 //}
 
+
+//we need to remove boid namespace here
+
 namespace Boid {
   double Boid::Distance(Boid const& b1, Boid const& b2) {
     double dx = b1.position_.x - b2.position_.x;
