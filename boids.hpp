@@ -5,6 +5,7 @@
 #include <cmath>
 #include <vector>
 
+namespace Vector2d{
 class Vector2d {
  public:
   double x{};
@@ -14,7 +15,8 @@ class Vector2d {
   Vector2d operator*(double const&);      //prodotto per scalare
   double length(Vector2d const&);     //ritorna la lunghezza del vettore
 };
-
+}
+namespace Boid{
 class Boid {
   Vector2d position_{};
   Vector2d velocity_{};
@@ -33,5 +35,5 @@ class Boid {
 
   void Draw(sf::RenderWindow& window) const;      //draw boid
 };
-
+}
 #endif

@@ -2,11 +2,11 @@
 
 #include <cmath>
 
-namespace Vector2d_NS {
+
   //missing & in vector2d 
 Vector2d operator+=(Vector2d& const& v) {
   return {this->x + v.x, this->y + v.y};
-}
+
 
 
 Vector2d operator*(double const& scalar) { 
