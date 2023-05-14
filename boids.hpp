@@ -18,19 +18,19 @@ class Vector2d {
 }  // namespace Vector2d
 namespace Boid {
 class Boid {
-  Vector2d position_{};
-  Vector2d velocity_{};
+  Vector2d::Vector2d position_{};
+  Vector2d::Vector2d velocity_{};
   sf::ConvexShape shape_;
 
  public:
-  Boid(Vector2d const& pos, Vector2d const& vel,
-       Vector2d const& acc)  // constructor
+  Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
+       Vector2d::Vector2d const& acc)  // constructor
       : position_{pos}, velocity_{vel} {
     // create boid shape (choice: triangle)
   }
 
-  Vector2d GetPosition(Boid const&);  // ritorna la posizione del boid
-  Vector2d GetVelocity(Boid const&);  // ritorna la velocità del boid
+  Vector2d::Vector2d GetPosition(Boid const&);  // ritorna la posizione del boid
+  Vector2d::Vector2d GetVelocity(Boid const&);  // ritorna la velocità del boid
 
   double Distance(Boid const& b1,
                   Boid const& b2);  // ritorna la distanza tra due boid
