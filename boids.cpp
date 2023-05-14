@@ -2,21 +2,21 @@
 
 #include <cmath>
 
-namespace Vector2d {
-  Vector2d Vector2d::operator+=(Vector2d const& v) {
+//namespace Vector2d {
+  Vector2d::Vector2d Vector2d::Vector2d::operator+=(const Vector2d& v) {
     x += v.x;
     y += v.y;
     return *this;
   }
 
-  Vector2d Vector2d::operator*(double const& scalar) {
+  Vector2d::Vector2d Vector2d::Vector2d::operator*(double const& scalar) {
     return {this->x * scalar, this->y * scalar};
   }
 
   double Vector2d::length(Vector2d const& v) {
     return {std::sqrt(v.x * v.x + v.y * v.y)};
   }
-}
+//}
 
 namespace Boid {
   double Boid::Distance(Boid const& b1, Boid const& b2) {

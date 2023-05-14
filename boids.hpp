@@ -15,6 +15,7 @@ class Vector2d {
   Vector2d operator*(double const&);     // prodotto per scalare
   double length(Vector2d const&);        // ritorna la lunghezza del vettore
 };
+double length(Vector2d const&);
 }  // namespace Vector2d
 namespace Boid {
 class Boid {
