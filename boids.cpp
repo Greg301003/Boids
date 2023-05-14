@@ -25,6 +25,8 @@ namespace Boid {
     return std::sqrt(dx * dx + dy * dy);
   }
 
+// this generates error
+
  /* double Boid::Distance(Boid const& i, Boid const& j) {
     auto distance = i.position_ - j.position_;
     return distance.length();
