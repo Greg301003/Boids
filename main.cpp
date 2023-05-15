@@ -12,7 +12,7 @@ int main() {
 
     //added static cast
 
-    Vector2d::Vector2d pos = {static_cast<double>(rand() % 800),static_cast<double>( rand() % 600)};
+    Vector2d::Vector2d pos = {static_cast<double>(rand() % 1200),static_cast<double>( rand() % 1000)};
     Vector2d::Vector2d vel = {static_cast<double>(rand() % 7), static_cast<double>(rand() % 7)};
     Vector2d::Vector2d acc = {0, 0};
     Boid::Boid boid(pos, vel, acc);
@@ -32,7 +32,7 @@ int main() {
     window.clear();
     // draw boids
     for (auto const& boid : boids) {
-      boid.Boid::Draw(window);
+      boid.Draw(window);
     }
 
     window.display();

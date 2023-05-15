@@ -32,6 +32,7 @@ class Boid {
     shape_.setPoint(0, sf::Vector2f(0, -10));
     shape_.setPoint(1, sf::Vector2f(-5, 5));
     shape_.setPoint(2, sf::Vector2f(5, 5));
+    shape_.setPosition(position_.x, position_.y);
     shape_.setFillColor(sf::Color::White); // White color
   }
 
