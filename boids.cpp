@@ -49,3 +49,9 @@ void Boid::Boid::UpdatePosition() {
   position_ += velocity_;
   shape_.setPosition(position_.x, position_.y);
 }
+
+
+void Boid::Boid::UpdateRotation() {
+  double angle = std::atan2(velocity_.y, velocity_.x);
+  shape_.setRotation(static_cast<float>(angle * 180.0 / M_PI));
+}

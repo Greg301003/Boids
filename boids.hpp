@@ -36,6 +36,8 @@ class Boid {
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
   void UpdatePosition(); //update boids
+
+  void UpdateRotation(); //trying rotation
 };
 }  // namespace Boid
 #endif

@@ -31,6 +31,7 @@ int main() {
     }
       for (auto& boid : boids) {
     boid.UpdatePosition();
+    boid.UpdateRotation();
   }
 
     window.clear();
