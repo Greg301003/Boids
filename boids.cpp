@@ -46,4 +46,6 @@
   void Boid::Boid::Draw(sf::RenderWindow& window) const {
     window.draw(shape_);
   }
+
+  
 //} 

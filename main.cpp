@@ -2,7 +2,7 @@
 int main() {
   // create window
 
-  sf::RenderWindow window(sf::VideoMode(800, 600), "Boids Simulation");
+  sf::RenderWindow window(sf::VideoMode(1200, 1000), "Boids Simulation");
 
   // create a vector of boids
   std::vector<Boid::Boid> boids;
@@ -11,7 +11,7 @@ int main() {
   for (int i = 0; i < 40; ++i) {
 
     //added static cast
-    
+
     Vector2d::Vector2d pos = {static_cast<double>(rand() % 800),static_cast<double>( rand() % 600)};
     Vector2d::Vector2d vel = {static_cast<double>(rand() % 7), static_cast<double>(rand() % 7)};
     Vector2d::Vector2d acc = {0, 0};
@@ -32,7 +32,7 @@ int main() {
     window.clear();
     // draw boids
     for (auto const& boid : boids) {
-      boid.Draw(window);
+      boid.Boid::Draw(window);
     }
 
     window.display();
