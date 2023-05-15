@@ -2,7 +2,6 @@
 
 #include <cmath>
 
-// namespace Vector2d {
 Vector2d::Vector2d Vector2d::Vector2d::operator+=(const Vector2d& v) {
   x += v.x;
   y += v.y;
@@ -16,18 +15,13 @@ Vector2d::Vector2d Vector2d::Vector2d::operator*(double const& scalar) {
 double Vector2d::length(Vector2d const& v) {
   return {std::sqrt(v.x * v.x + v.y * v.y)};
 }
-//}
-
-// we need to remove boid namespace here
-
-// namespace Boid {
 
 Boid::Boid::Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
                  Vector2d::Vector2d const& acc)  // constructor
     : position_{pos}, velocity_{vel} {
   // create boid triangle shape so that we know where they're pointing
 
-    shape_.setPointCount(3);
+  shape_.setPointCount(3);
   shape_.setPoint(0, sf::Vector2f(0, -10));
   shape_.setPoint(1, sf::Vector2f(-5, 5));
   shape_.setPoint(2, sf::Vector2f(5, 5));
@@ -41,13 +35,6 @@ double Boid::Boid::Distance(Boid const& b1, Boid const& b2) {
   return std::sqrt(dx * dx + dy * dy);
 }
 
-// this generates error
-
-/* double Boid::Distance(Boid const& i, Boid const& j) {
-   auto distance = i.position_ - j.position_;
-   return distance.length();
- }*/
-
 Vector2d::Vector2d Boid::Boid::GetPosition(Boid const& b) {
   return b.position_;
 }
@@ -57,5 +44,3 @@ Vector2d::Vector2d Boid::Boid::GetVelocity(Boid const& b) {
 }
 
 void Boid::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
-
-//}
