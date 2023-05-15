@@ -22,7 +22,7 @@ To run the Boids simulation on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/boids-cpp.git
+   git clone https://github.com/Greg301003/Boids.git
 
 2. Build the project:
 
@@ -37,3 +37,19 @@ To run the Boids simulation on your local machine, follow these steps:
 - Adjust the simulation parameters through command-line arguments or configuration files.
 
 4. Observe the flocking behavior of the simulated birds!
+
+
+## Usage
+
+- Customize simulation parameters: 
+ 
+  - Number of boids.
+  - Speed and acceleration limits.
+  - Visibility range.
+  - Alignment, cohesion, and separation factors.
+  - Environment boundaries.
+- Additional features:
+
+Pause and resume the simulation.
+Modify the appearance of boids and the environment.
+Save screenshots or recordings of the simulation.
