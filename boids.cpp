@@ -44,3 +44,8 @@ Vector2d::Vector2d Boid::Boid::GetVelocity(Boid const& b) {
 }
 
 void Boid::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
+
+void Boid::Boid::UpdatePosition() {
+  position_ += velocity_;
+  shape_.setPosition(position_.x, position_.y);
+}

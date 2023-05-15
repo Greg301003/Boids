@@ -34,6 +34,8 @@ class Boid {
                   Boid const& b2);  // ritorna la distanza tra due boid
 
   void Draw(sf::RenderWindow& window) const;  // draw boid
+
+  void UpdatePosition(); //update boids
 };
 }  // namespace Boid
 #endif
