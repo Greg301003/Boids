@@ -21,8 +21,8 @@
 
 //we need to remove boid namespace here
 
-namespace Boid {
-  double Boid::Distance(Boid const& b1, Boid const& b2) {
+//namespace Boid {
+  double Boid::Boid::Distance(Boid const& b1, Boid const& b2) {
     double dx = b1.position_.x - b2.position_.x;
     double dy = b1.position_.y - b2.position_.y;
     return std::sqrt(dx * dx + dy * dy);
@@ -35,15 +35,15 @@ namespace Boid {
     return distance.length();
   }*/
 
-  Vector2d::Vector2d Boid::GetPosition(Boid const& b) {
+  Vector2d::Vector2d Boid::Boid::GetPosition(Boid const& b) {
     return b.position_;
   }
 
-  Vector2d::Vector2d Boid::GetVelocity(Boid const& b) {
+  Vector2d::Vector2d Boid::Boid::GetVelocity(Boid const& b) {
     return b.velocity_;
   }
 
-  void Boid::Draw(sf::RenderWindow& window) const {
+  void Boid::Boid::Draw(sf::RenderWindow& window) const {
     window.draw(shape_);
   }
-} 
+//} 
