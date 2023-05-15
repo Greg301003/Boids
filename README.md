@@ -48,8 +48,3 @@ To run the Boids simulation on your local machine, follow these steps:
   - Visibility range.
   - Alignment, cohesion, and separation factors.
   - Environment boundaries.
-- Additional features:
-
-Pause and resume the simulation.
-Modify the appearance of boids and the environment.
-Save screenshots or recordings of the simulation.
