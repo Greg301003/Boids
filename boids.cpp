@@ -17,8 +17,8 @@ double Vector2d::length(Vector2d const& v) {
 }
 
 Boid::Boid::Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
-                 Vector2d::Vector2d const& acc)  // constructor
-    : position_{pos}, velocity_{vel} {
+                 Vector2d::Vector2d const& acc, double rotation_speed)  // constructor
+    : position_{pos}, velocity_{vel}, rotation_speed_{rotation_speed} {
   // create boid triangle shape so that we know where they're pointing
 
   shape_.setPointCount(3);
@@ -53,5 +53,6 @@ void Boid::Boid::UpdatePosition() {
 
 void Boid::Boid::UpdateRotation() {
   double angle = std::atan2(velocity_.y, velocity_.x);
-  shape_.setRotation(static_cast<float>(angle * 180.0 / M_PI));
+  //adding rotation speed
+  shape_.setRotation(static_cast<float>(angle * 180.0 / M_PI)+ static_cast<float>(rotation_speed_));
 }

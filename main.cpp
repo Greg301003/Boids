@@ -16,7 +16,10 @@ int main() {
     Vector2d::Vector2d vel = {static_cast<double>( ((rand() % 5)-2.5)/100 ),
                               static_cast<double>(((rand() % 5)-2.5)/100)};
     Vector2d::Vector2d acc = {0, 0};
-    Boid::Boid boid(pos, vel, acc);
+
+    //adding rotation speed
+    double rotation_speed = static_cast<double>(5000); 
+    Boid::Boid boid(pos, vel, acc, rotation_speed);
     boids.push_back(boid);
   }
 

@@ -22,10 +22,11 @@ class Boid {
   Vector2d::Vector2d position_{};
   Vector2d::Vector2d velocity_{};
   sf::ConvexShape shape_;
+  double rotation_speed_;
 
  public:
   Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
-       Vector2d::Vector2d const& acc);          // constructor
+       Vector2d::Vector2d const& acc, double rotation_speed);          // constructor
 
   Vector2d::Vector2d GetPosition(Boid const&);  // ritorna la posizione del boid
   Vector2d::Vector2d GetVelocity(Boid const&);  // ritorna la velocità del boid
