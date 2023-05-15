@@ -25,16 +25,7 @@ class Boid {
 
  public:
   Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
-       Vector2d::Vector2d const& acc)  // constructor
-      : position_{pos}, velocity_{vel} {
-     // create boid triangle shape so that we know where they're pointing
-    shape_.setPointCount(3);
-    shape_.setPoint(0, sf::Vector2f(0, -10));
-    shape_.setPoint(1, sf::Vector2f(-5, 5));
-    shape_.setPoint(2, sf::Vector2f(5, 5));
-    shape_.setPosition(position_.x, position_.y);
-    shape_.setFillColor(sf::Color::White); // White color
-  }
+       Vector2d::Vector2d const& acc);          // constructor
 
   Vector2d::Vector2d GetPosition(Boid const&);  // ritorna la posizione del boid
   Vector2d::Vector2d GetVelocity(Boid const&);  // ritorna la velocità del boid
