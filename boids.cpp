@@ -22,11 +22,15 @@ Boid::Boid::Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
   // create boid triangle shape so that we know where they're pointing
 
   shape_.setPointCount(3);
-  shape_.setPoint(0, sf::Vector2f(0, -10));
-  shape_.setPoint(1, sf::Vector2f(-5, 5));
-  shape_.setPoint(2, sf::Vector2f(5, 5));
+  shape_.setPoint(0, sf::Vector2f(15, 0));
+  shape_.setPoint(1, sf::Vector2f(0, -8));
+  shape_.setPoint(2, sf::Vector2f(0, 8));
   shape_.setPosition(position_.x, position_.y);
   shape_.setFillColor(sf::Color::White);  // White color
+
+
+  //trying to fix rotation 
+  //shape_.setOrigin(position_.x, position_.y);
 }
 
 double Boid::Boid::Distance(Boid const& b1, Boid const& b2) {

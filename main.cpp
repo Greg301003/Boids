@@ -18,7 +18,7 @@ int main() {
     Vector2d::Vector2d acc = {0, 0};
 
     //adding rotation speed
-    double rotation_speed = static_cast<double>(5000); 
+    double rotation_speed = static_cast<double>(1.0); 
     Boid::Boid boid(pos, vel, acc, rotation_speed);
     boids.push_back(boid);
   }
