@@ -32,7 +32,10 @@ sf::Vector2<float> bd::Boid::GetVelocity(Boid const& b) { return b.velocity_; }
 
 void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
-void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize) {
+
+
+
+void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize, std::vector<Boid> const& boids) {
   
 //adding cohesion
 sf::Vector2<float> cohesionDirection = Cohesion(boids);
@@ -95,7 +98,7 @@ sf::Vector2<float> bd::Boid::Cohesion(std::vector<Boid> const& boids) {
 
 
     if (&boid != this) {
-      centerOfMass += boid.GetPosition();
+      CM += boid.GetPosition();
       count++;
     }
     
@@ -103,13 +106,13 @@ sf::Vector2<float> bd::Boid::Cohesion(std::vector<Boid> const& boids) {
 //calculate CM
 
   if (count > 0) {
-    centerOfMass /= static_cast<float>(count);
+    CM /= static_cast<float>(count);
   }
 
 //calculate boids direction???
 
-  sf::Vector2<float> cohesionDirection = centerOfMass - position_;
-  cohesionDirection = Normalize(cohesionDirection);
+  sf::Vector2<float> cohesionDirection = CM - position_;
+  cohesionDirection = bd::boid::Normalize(cohesionDirection);
 
 
 return cohesionDirection;

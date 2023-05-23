@@ -23,16 +23,17 @@ class Boid {
 
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
-  void UpdatePosition(sf::Vector2<float> windowSize); //update boids
+  void UpdatePosition(sf::Vector2<float> windowSize, std::vector<Boid> const& boids); //update boids
 
   void UpdateRotation(); //trying rotation
 
-  sf::Vector2<float> Cohesion(std::vector<Boid> const& boids); //first try cohesion
+  sf::Vector2<float> Cohesion(std::vector<Boid> const& boids);
+ //first try cohesion
 
 
   sf::Vector2<float> Normalize(sf::Vector2<float> const& vector); //used to sustain cohesion
 
 };
-}  // namespace Boid
+}  // namespace bd
 
 #endif
