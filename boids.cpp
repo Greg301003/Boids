@@ -2,15 +2,15 @@
 
 #include <cmath>
 
-bd::Boid::Boid(Vector2d::Vector2d const& pos, Vector2d::Vector2d const& vel,
-                 Vector2d::Vector2d const& acc, double rotation_speed)  // constructor
+bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
+                 sf::Vector2<float> const& acc, double rotation_speed)  // constructor
     : position_{pos}, velocity_{vel}, rotation_speed_{rotation_speed} {
   // create boid triangle shape so that we know where they're pointing
 
   shape_.setPointCount(3);
-  shape_.setPoint(0, sf::Vector2f(15, 0));
-  shape_.setPoint(1, sf::Vector2f(0, -8));
-  shape_.setPoint(2, sf::Vector2f(0, 8));
+  shape_.setPoint(0, sf::Vector2<float>(15, 0));
+  shape_.setPoint(1, sf::Vector2<float>(0, -8));
+  shape_.setPoint(2, sf::Vector2<float>(0, 8));
   shape_.setPosition(position_.x, position_.y);
   shape_.setFillColor(sf::Color::White);  // White color
 
@@ -25,23 +25,23 @@ double bd::Boid::Distance(Boid const& b1, Boid const& b2) {
   return std::sqrt(dx * dx + dy * dy);
 }
 
-sf::Vector2d bd::Boid::GetPosition(Boid const& b) {
+sf::Vector2<float> bd::Boid::GetPosition(Boid const& b) {
   return b.position_;
 }
 
-Vector2d::Vector2d bd::Boid::GetVelocity(Boid const& b) {
+sf::Vector2<float> bd::Boid::GetVelocity(Boid const& b) {
   return b.velocity_;
 }
 
 void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
-void Boid::Boid::UpdatePosition() {
+void bd::Boid::UpdatePosition() {
   position_ += velocity_;
   shape_.setPosition(position_.x, position_.y);
 }
 
 
-void Boid::Boid::UpdateRotation() {
+void bd::Boid::UpdateRotation() {
   double angle = std::atan2(velocity_.y, velocity_.x);
   //adding rotation speed
   shape_.setRotation(static_cast<float>(angle * 180.0 / M_PI)+ static_cast<float>(rotation_speed_));

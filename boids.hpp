@@ -8,16 +8,16 @@
 namespace bd {
 class Boid {
   sf::Vector2<float> position_{};
-  sf::Vector2f velocity_{};
+  sf::Vector2<float> velocity_{};
   sf::ConvexShape shape_;
   double rotation_speed_;
 
  public:
-  Boid(sf::Vector2f const& pos, sf::Vector2f const& vel,
-       sf::Vector2d const& acc, double rotation_speed);          // constructor
+  Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
+       sf::Vector2<float> const& acc, double rotation_speed);          // constructor
 
-  sf::Vector2d GetPosition(Boid const&);  // ritorna la posizione del boid
-  sf::Vector2d GetVelocity(Boid const&);  // ritorna la velocità del boid
+  sf::Vector2<float> GetPosition(Boid const&);  // ritorna la posizione del boid
+  sf::Vector2<float> GetVelocity(Boid const&);  // ritorna la velocità del boid
 
   double Distance(Boid const& b1,
                   Boid const& b2);  // ritorna la distanza tra due boid

@@ -1,3 +1,3 @@
-/Users/greg/labs/boids/build/debug/CMakeFiles/boids.dir
-/Users/greg/labs/boids/build/debug/CMakeFiles/edit_cache.dir
-/Users/greg/labs/boids/build/debug/CMakeFiles/rebuild_cache.dir
+/Users/dariocampisi/università_locale/programmazione/Boids/build/debug/CMakeFiles/boids.dir
+/Users/dariocampisi/università_locale/programmazione/Boids/build/debug/CMakeFiles/edit_cache.dir
+/Users/dariocampisi/università_locale/programmazione/Boids/build/debug/CMakeFiles/rebuild_cache.dir

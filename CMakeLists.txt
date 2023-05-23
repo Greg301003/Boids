@@ -17,7 +17,7 @@ string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined -fno-o
 
 find_package(SFML 2.5.1 COMPONENTS graphics REQUIRED)
 
-add_executable(boids boids.cpp main.cpp )
+add_executable(boids boids.cpp main.cpp)
 target_link_libraries(boids sfml-graphics sfml-window sfml-system)
 
 if (BUILD_TESTING)
