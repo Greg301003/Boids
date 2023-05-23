@@ -64,3 +64,46 @@ void bd::Boid::UpdateRotation() {
   shape_.setRotation(static_cast<float>(angle * 180.0 / M_PI) +
                      static_cast<float>(rotation_speed_));
 }
+
+
+
+// try cohesion
+
+
+sf::Vector2<float> bd::Boid::Cohesion(std::vector<Boid> const& boids) {
+
+//CM center of mass
+  sf::Vector2<float> CM(0.0f, 0.0f);
+
+  //counts boids
+  int count = 0;
+
+
+  // Sum of boids positions
+
+
+  for (auto const& boid : boids) {
+
+
+    // Ignore himself obv
+
+
+    if (&boid != this) {
+      centerOfMass += boid.GetPosition();
+      count++;
+    }
+    
+
+//calculate CM
+
+  if (count > 0) {
+    centerOfMass /= static_cast<float>(count);
+  }
+
+//calculate boids direction???
+
+  sf::Vector2<float> cohesionDirection = centerOfMass - position_;
+  cohesionDirection = Normalize(cohesionDirection);
+
+}
+
