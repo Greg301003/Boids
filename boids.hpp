@@ -26,6 +26,9 @@ class Boid {
   void UpdatePosition(sf::Vector2<float> windowSize); //update boids
 
   void UpdateRotation(); //trying rotation
+
+  sf::Vector2<float> Cohesion(std::vector<Boid> const& boids); //first try cohesion
+  
 };
 }  // namespace Boid
 
