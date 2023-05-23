@@ -26,7 +26,13 @@ double bd::Boid::Distance(Boid const& b1, Boid const& b2) {
   return std::sqrt(dx * dx + dy * dy);
 }
 
-sf::Vector2<float> bd::Boid::GetPosition(Boid const& b) { return b.position_; }
+////sf::Vector2<float> bd::Boid::GetPosition(Boid const& b) { return b.position_; }
+
+sf::Vector2<float> bd::Boid::GetPosition() const {
+  return position_;
+}
+
+
 
 sf::Vector2<float> bd::Boid::GetVelocity(Boid const& b) { return b.velocity_; }
 
@@ -39,7 +45,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize, std::vector<Boid> c
   
 //adding cohesion
 sf::Vector2<float> cohesionDirection = Cohesion(boids);
-velocity_ += cohesionDirection * cohesion_strength;
+velocity_ += cohesionDirection * /*cohesion_strength*/ (1.f);
 
 
 
@@ -112,7 +118,7 @@ sf::Vector2<float> bd::Boid::Cohesion(std::vector<Boid> const& boids) {
 //calculate boids direction???
 
   sf::Vector2<float> cohesionDirection = CM - position_;
-  cohesionDirection = bd::boid::Normalize(cohesionDirection);
+  cohesionDirection = bd::Boid::Normalize(cohesionDirection);
 
 
 return cohesionDirection;
