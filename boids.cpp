@@ -34,6 +34,12 @@ void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
 void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize) {
   
+//adding cohesion
+sf::Vector2<float> cohesionDirection = Cohesion(boids);
+velocity_ += cohesionDirection * cohesion_strength;
+
+
+
 
 position_ += velocity_;
 
@@ -93,7 +99,7 @@ sf::Vector2<float> bd::Boid::Cohesion(std::vector<Boid> const& boids) {
       count++;
     }
     
-
+  }
 //calculate CM
 
   if (count > 0) {

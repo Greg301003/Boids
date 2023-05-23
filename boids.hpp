@@ -30,7 +30,7 @@ class Boid {
   sf::Vector2<float> Cohesion(std::vector<Boid> const& boids); //first try cohesion
 
 
-   sf::Vector2<float> Normalize(sf::Vector2<float> const& vector); //used to sustain cohesion
+  sf::Vector2<float> Normalize(sf::Vector2<float> const& vector); //used to sustain cohesion
 
 };
 }  // namespace Boid
