@@ -9,16 +9,16 @@ int main() {
   std::vector<bd::Boid> boids;
 
   // generate boids
-  for (int i = 0; i < 30; ++i) {
+  for (int i = 0; i < 100; ++i) {
     // added static cast
 
     sf::Vector2<float> pos = {static_cast<float>(rand() % 1200),
                               static_cast<float>(rand() % 1000)};
-    sf::Vector2<float> vel = {static_cast<float>( ((rand() % 5)-2.5)/100 ),
-                              static_cast<float>(((rand() % 5)-2.5)/100)};
+    sf::Vector2<float> vel = {static_cast<float>(((rand() % 5) - 2.5) / 100),
+                              static_cast<float>(((rand() % 5) - 2.5) / 100)};
 
-    //adding rotation speed
-    double rotation_speed = static_cast<double>(1.0); 
+    // adding rotation speed
+    double rotation_speed = static_cast<double>(1.0);
     bd::Boid boid(pos, vel, rotation_speed);
     boids.push_back(boid);
   }
@@ -27,17 +27,21 @@ int main() {
   {
     sf::Event event;
     while (window.pollEvent(event)) {
+      
       if (event.type == sf::Event::Closed)  // close clicking
       {
         window.close();
       }
     }
-      for (auto& boid : boids) {
-    boid.UpdatePosition();
-    boid.UpdateRotation();
-  }
 
-    window.clear();
+    window.clear(); //to set background color
+
+    for (auto& boid : boids) {
+      boid.UpdatePosition();
+      boid.UpdateRotation();
+    }
+
+
     // draw boids
     for (auto const& boid : boids) {
       boid.Draw(window);
