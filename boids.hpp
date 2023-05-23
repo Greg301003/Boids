@@ -13,7 +13,7 @@ class Boid {
   double rotation_speed_;
 
  public:
-  Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel, double rotation_speed);          // constructor
+  Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel, double rotation_speed);    // constructor
 
   sf::Vector2<float> GetPosition(Boid const&);  // ritorna la posizione del boid
   sf::Vector2<float> GetVelocity(Boid const&);  // ritorna la velocità del boid

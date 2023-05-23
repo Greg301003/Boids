@@ -27,20 +27,19 @@ int main() {
   {
     sf::Event event;
     while (window.pollEvent(event)) {
-      
       if (event.type == sf::Event::Closed)  // close clicking
       {
         window.close();
       }
     }
 
-    window.clear(); //to set background color
+    sf::Color color(240,240,240);
+    window.clear(color);  // to set background color
 
     for (auto& boid : boids) {
       boid.UpdatePosition();
       boid.UpdateRotation();
     }
-
 
     // draw boids
     for (auto const& boid : boids) {
