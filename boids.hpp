@@ -23,7 +23,7 @@ class Boid {
 
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
-  void UpdatePosition(); //update boids
+  void UpdatePosition(sf::Vector2<float> windowSize); //update boids
 
   void UpdateRotation(); //trying rotation
 };

@@ -32,8 +32,29 @@ sf::Vector2<float> bd::Boid::GetVelocity(Boid const& b) { return b.velocity_; }
 
 void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
-void bd::Boid::UpdatePosition() {
-  position_ += velocity_;
+void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize) {
+  
+
+position_ += velocity_;
+
+    // Controlla se il boid ha superato i bordi della finestra
+    if (position_.x < 0) {
+        position_.x += windowSize.x;
+    }
+    else if (position_.x > windowSize.x) {
+        position_.x -= windowSize.x;
+    }
+
+    if (position_.y < 0) {
+        position_.y += windowSize.y;
+    }
+    else if (position_.y > windowSize.y) {
+        position_.y -= windowSize.y;
+    }
+
+
+
+
   shape_.setPosition(position_.x, position_.y);
 }
 

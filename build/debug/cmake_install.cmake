@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dariocampisi/università_locale/programmazione/Boids
+# Install script for directory: /Users/greg/labs/boids
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/dariocampisi/università_locale/programmazione/Boids/build/debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/greg/labs/boids/build/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
