@@ -1,0 +1,3 @@
+/Users/dariocampisi/università_locale/programmazione/Boids/build/CMakeFiles/boids.dir
+/Users/dariocampisi/università_locale/programmazione/Boids/build/CMakeFiles/edit_cache.dir
+/Users/dariocampisi/università_locale/programmazione/Boids/build/CMakeFiles/rebuild_cache.dir
