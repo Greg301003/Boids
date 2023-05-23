@@ -41,7 +41,7 @@ int main() {
 
 
     for (auto& boid : boids) {
-      boid.UpdatePosition(windowSize);
+      boid.UpdatePosition(windowSize, boids);
       boid.UpdateRotation();
     }
 

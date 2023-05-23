@@ -128,7 +128,7 @@ return cohesionDirection;
 
 //defining normalize funct
 
-sf::Vector2<float> Normalize(sf::Vector2<float> const& vector) {
+sf::Vector2<float> bd::Boid::Normalize(sf::Vector2<float> const& vector) {
   float length = std::sqrt(vector.x * vector.x + vector.y * vector.y);
   if (length > 0.0f) {
     return vector / length;
