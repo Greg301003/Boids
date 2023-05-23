@@ -105,5 +105,8 @@ sf::Vector2<float> bd::Boid::Cohesion(std::vector<Boid> const& boids) {
   sf::Vector2<float> cohesionDirection = centerOfMass - position_;
   cohesionDirection = Normalize(cohesionDirection);
 
+
+return cohesionDirection;
+
 }
 
