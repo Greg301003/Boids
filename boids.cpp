@@ -2,8 +2,7 @@
 
 #include <cmath>
 
-bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
-                 sf::Vector2<float> const& acc, double rotation_speed)  // constructor
+bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel, double rotation_speed)  // constructor
     : position_{pos}, velocity_{vel}, rotation_speed_{rotation_speed} {
   // create boid triangle shape so that we know where they're pointing
 
