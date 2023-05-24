@@ -36,6 +36,12 @@ class Boid {
 
 
   sf::Vector2<float> Normalize(sf::Vector2<float> const& vector); //used to sustain cohesion
+  
+
+  //decl alignment first try
+  sf::Vector2<float> Alignment(std::vector<Boid> const& boids);
+
+
 
 };
 }  // namespace bd
