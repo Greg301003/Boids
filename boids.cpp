@@ -34,7 +34,7 @@ sf::Vector2<float> bd::Boid::GetPosition() const {
 
 
 
-sf::Vector2<float> bd::Boid::GetVelocity() { return velocity_;
+sf::Vector2<float> bd::Boid::GetVelocity() const { return velocity_;
 }
 
 void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
