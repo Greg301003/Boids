@@ -47,6 +47,12 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
   position_ += velocity_;
 
+  //adding sep
+
+  sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
+velocity_ += separationDirection * /*separation_strength*/ (0.00001f);
+
+
   // Controlla se il boid ha superato i bordi della finestra
   if (position_.x < 0) {
     position_.x += windowSize.x;
