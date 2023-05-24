@@ -2,6 +2,14 @@
 
 #include <cmath>
 
+// adding a max velocity
+
+float maxVelocity = 0.1f;
+
+// and a damping factor to mitigate the vel
+
+float dampingFactor = 0.99999f;
+
 bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
                double rotation_speed)  // constructor
     : position_{pos}, velocity_{vel}, rotation_speed_{rotation_speed} {
@@ -40,18 +48,16 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
                               float separation_radius) {
   // adding cohesion
   sf::Vector2<float> cohesionDirection = Cohesion(boids);
-  velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00001f);
+  velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
 
   // adding align
   sf::Vector2<float> alignmentDirection = Alignment(boids);
-  velocity_ += alignmentDirection * /*alignment_strength*/ (0.00001f);
-
-  position_ += velocity_;
+  velocity_ += alignmentDirection * /*alignment_strength*/ (0.0001f);
 
   // adding sep
 
   sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
-  velocity_ += separationDirection * /*separation_strength*/ (0.00001f);
+  velocity_ += separationDirection * /*separation_strength*/ (0.0001f);
 
   // Controlla se il boid ha superato i bordi della finestra
   if (position_.x < 0) {
@@ -67,6 +73,16 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
   }
 
   shape_.setPosition(position_.x, position_.y);
+
+  // cap velocity
+  if (std::hypot(velocity_.x, velocity_.y) > maxVelocity) {
+    velocity_ = bd::Boid::Normalize(velocity_) * maxVelocity;
+  }
+
+  // mitigate vel
+  velocity_ *= dampingFactor;
+
+  position_ += velocity_;
 }
 
 void bd::Boid::UpdateRotation() {
