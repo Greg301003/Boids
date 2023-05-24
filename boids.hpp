@@ -20,7 +20,8 @@ class Boid {
   sf::Vector2<float> GetPosition() const;
 
 
-  sf::Vector2<float> GetVelocity(Boid const&);  // ritorna la velocità del boid
+  sf::Vector2<float> GetVelocity() const;
+  // ritorna la velocità del boid
 
   double Distance(Boid const& b1,
                   Boid const& b2);  // ritorna la distanza tra due boid
