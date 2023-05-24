@@ -51,7 +51,7 @@ velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00001f);
 
 //adding align
 sf::Vector2<float> alignmentDirection = Alignment(boids);
-velocity_ += alignmentDirection * /*alignment_strength*/  (0.001f);
+velocity_ += alignmentDirection * /*alignment_strength*/  (0.00001f);
 
 
 
