@@ -42,6 +42,11 @@ class Boid {
 
   // decl alignment first try
   sf::Vector2<float> Alignment(std::vector<Boid> const& boids);
+
+  // adding sep
+
+  sf::Vector2<float> Separation(std::vector<Boid> const& boids, float separationRadius);
+
 };
 }  // namespace bd
 
