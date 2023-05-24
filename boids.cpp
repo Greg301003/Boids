@@ -133,3 +133,22 @@ sf::Vector2<float> bd::Boid::Normalize(sf::Vector2<float> const& vector) {
     return vector;
   }
 }
+
+
+//def sep
+sf::Vector2<float> bd::Boid::Separation(std::vector<Boid> const& boids, float separationRadius) {
+  sf::Vector2<float> separationDirection(0.0f, 0.0f);
+
+  for (auto const& boid : boids) {
+    if (&boid != this) {
+      double distance = Distance(*this, boid);
+      if (distance < separationRadius) {
+        sf::Vector2<float> direction = position_ - boid.GetPosition();
+        direction = Normalize(direction);
+        separationDirection += direction;
+      }
+    }
+  }
+
+  return separationDirection;
+}
