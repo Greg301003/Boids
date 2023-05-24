@@ -27,7 +27,7 @@ double bd::Boid::Distance(Boid const& b1, Boid const& b2) {
 }
 
 ////sf::Vector2<float> bd::Boid::GetPosition(Boid const& b) { return
-///b.position_; }
+/// b.position_; }
 
 sf::Vector2<float> bd::Boid::GetPosition() const { return position_; }
 
@@ -36,7 +36,8 @@ sf::Vector2<float> bd::Boid::GetVelocity() const { return velocity_; }
 void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
 void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
-                              std::vector<Boid> const& boids, float separation_radius) {
+                              std::vector<Boid> const& boids,
+                              float separation_radius) {
   // adding cohesion
   sf::Vector2<float> cohesionDirection = Cohesion(boids);
   velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00001f);
@@ -47,12 +48,10 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
   position_ += velocity_;
 
-  //adding sep
-
+  // adding sep
 
   sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
-velocity_ += separationDirection * /*separation_strength*/ (0.00001f);
-
+  velocity_ += separationDirection * /*separation_strength*/ (0.00001f);
 
   // Controlla se il boid ha superato i bordi della finestra
   if (position_.x < 0) {
@@ -141,9 +140,9 @@ sf::Vector2<float> bd::Boid::Normalize(sf::Vector2<float> const& vector) {
   }
 }
 
-
-//def sep
-sf::Vector2<float> bd::Boid::Separation(std::vector<Boid> const& boids, float separationRadius) {
+// def sep
+sf::Vector2<float> bd::Boid::Separation(std::vector<Boid> const& boids,
+                                        float separationRadius) {
   sf::Vector2<float> separationDirection(0.0f, 0.0f);
 
   for (auto const& boid : boids) {

@@ -17,7 +17,7 @@ class Boid {
        double rotation_speed);  // constructor
 
   ////sf::Vector2<float> GetPosition(Boid const&);  // ritorna la posizione del
-  ///boid
+  /// boid
 
   sf::Vector2<float> GetPosition() const;
 
@@ -30,9 +30,10 @@ class Boid {
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
   void UpdatePosition(sf::Vector2<float> windowSize,
-                      std::vector<Boid> const& boids, float separation_radius);  // update boids
+                      std::vector<Boid> const& boids,
+                      float separation_radius);  // update boids
 
-  void UpdateRotation();                                // trying rotation
+  void UpdateRotation();                         // trying rotation
 
   sf::Vector2<float> Cohesion(std::vector<Boid> const& boids);
   // first try cohesion
@@ -45,8 +46,8 @@ class Boid {
 
   // adding sep
 
-  sf::Vector2<float> Separation(std::vector<Boid> const& boids, float separationRadius);
-
+  sf::Vector2<float> Separation(std::vector<Boid> const& boids,
+                                float separationRadius);
 };
 }  // namespace bd
 
