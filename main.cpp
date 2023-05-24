@@ -43,7 +43,7 @@ float separation_radius = 100.0f; // Adjust the value as per your requirement
                             static_cast<float>(window.getSize().y));
 
     for (auto& boid : boids) {
-      boid.UpdatePosition(windowSize, boids);
+      boid.UpdatePosition(windowSize, boids, separation_radius);
       boid.UpdateRotation();
     }
 

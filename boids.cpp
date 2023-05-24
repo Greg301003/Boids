@@ -36,7 +36,7 @@ sf::Vector2<float> bd::Boid::GetVelocity() const { return velocity_; }
 void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
 void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
-                              std::vector<Boid> const& boids) {
+                              std::vector<Boid> const& boids, float separation_radius) {
   // adding cohesion
   sf::Vector2<float> cohesionDirection = Cohesion(boids);
   velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00001f);
@@ -48,6 +48,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
   position_ += velocity_;
 
   //adding sep
+
 
   sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
 velocity_ += separationDirection * /*separation_strength*/ (0.00001f);

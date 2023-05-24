@@ -30,7 +30,7 @@ class Boid {
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
   void UpdatePosition(sf::Vector2<float> windowSize,
-                      std::vector<Boid> const& boids);  // update boids
+                      std::vector<Boid> const& boids, float separation_radius);  // update boids
 
   void UpdateRotation();                                // trying rotation
 
