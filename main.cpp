@@ -12,8 +12,8 @@ int main() {
   for (int i = 0; i < 100; ++i) {
     // added static cast
 
-    sf::Vector2<float> pos = {static_cast<float>(rand() % 1200),
-                              static_cast<float>(rand() % 1000)};
+    sf::Vector2<float> pos = {static_cast<float>(rand() % 1600),
+                              static_cast<float>(rand() % 1400)};
     sf::Vector2<float> vel = {static_cast<float>(((rand() % 5) - 2.5) / 100),
                               static_cast<float>(((rand() % 5) - 2.5) / 100)};
 
