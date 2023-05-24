@@ -126,6 +126,30 @@ return cohesionDirection;
 }
 
 
+//def align
+
+sf::Vector2<float> bd::Boid::Alignment(std::vector<Boid> const& boids) {
+  sf::Vector2<float> averageVelocity(0.0f, 0.0f);
+  int count = 0;
+
+  for (auto const& boid : boids) {
+    if (&boid != this) {
+      averageVelocity += boid.GetVelocity();
+      count++;
+    }
+  }
+
+  if (count > 0) {
+    averageVelocity /= static_cast<float>(count);
+  }
+
+  return averageVelocity;
+}
+
+
+
+
+
 //defining normalize funct
 
 sf::Vector2<float> bd::Boid::Normalize(sf::Vector2<float> const& vector) {
