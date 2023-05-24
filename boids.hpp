@@ -13,12 +13,13 @@ class Boid {
   double rotation_speed_;
 
  public:
-  Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel, double rotation_speed);    // constructor
+  Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
+       double rotation_speed);  // constructor
 
-  ////sf::Vector2<float> GetPosition(Boid const&);  // ritorna la posizione del boid
+  ////sf::Vector2<float> GetPosition(Boid const&);  // ritorna la posizione del
+  ///boid
 
   sf::Vector2<float> GetPosition() const;
-
 
   sf::Vector2<float> GetVelocity() const;
   // ritorna la velocità del boid
@@ -28,22 +29,19 @@ class Boid {
 
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
-  void UpdatePosition(sf::Vector2<float> windowSize, std::vector<Boid> const& boids); //update boids
+  void UpdatePosition(sf::Vector2<float> windowSize,
+                      std::vector<Boid> const& boids);  // update boids
 
-  void UpdateRotation(); //trying rotation
+  void UpdateRotation();                                // trying rotation
 
   sf::Vector2<float> Cohesion(std::vector<Boid> const& boids);
- //first try cohesion
+  // first try cohesion
 
+  sf::Vector2<float> Normalize(
+      sf::Vector2<float> const& vector);  // used to sustain cohesion
 
-  sf::Vector2<float> Normalize(sf::Vector2<float> const& vector); //used to sustain cohesion
-  
-
-  //decl alignment first try
+  // decl alignment first try
   sf::Vector2<float> Alignment(std::vector<Boid> const& boids);
-
-
-
 };
 }  // namespace bd
 

@@ -33,12 +33,11 @@ int main() {
       }
     }
 
-    sf::Color color(240,240,240);
+    sf::Color color(240, 240, 240);
     window.clear(color);  // to set background color
 
-
-    sf::Vector2f windowSize(static_cast<float>(window.getSize().x), static_cast<float>(window.getSize().y));
-
+    sf::Vector2f windowSize(static_cast<float>(window.getSize().x),
+                            static_cast<float>(window.getSize().y));
 
     for (auto& boid : boids) {
       boid.UpdatePosition(windowSize, boids);
