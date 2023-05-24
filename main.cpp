@@ -9,7 +9,7 @@ int main() {
   std::vector<bd::Boid> boids;
 
   // separation parameters
-  float separation_radius = 20.0f;  // Adjust the value as per your requirement
+  float separation_radius = 25.0f;  // Adjust the value as per your requirement
 
   // generate boids
   for (int i = 0; i < 150; ++i) {

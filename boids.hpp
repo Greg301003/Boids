@@ -13,6 +13,23 @@ class Boid {
   double rotation_speed_;
 
  public:
+
+
+//differen types of boids
+
+
+  enum class BoidBehavior {
+        Bird1,
+        Bird2
+      //  , Predator
+    };
+
+    
+    BoidBehavior behavior_;
+
+
+
+
   Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
        double rotation_speed);  // constructor
 
