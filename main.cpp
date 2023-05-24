@@ -3,7 +3,7 @@
 int main() {
   // create window
 
-  sf::RenderWindow window(sf::VideoMode(1200, 1000), "Boids Simulation");
+  sf::RenderWindow window(sf::VideoMode(1600, 1400), "Boids Simulation");
 
   // create a vector of boids
   std::vector<bd::Boid> boids;
