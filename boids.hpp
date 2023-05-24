@@ -31,9 +31,9 @@ class Boid {
 
   void UpdatePosition(sf::Vector2<float> windowSize,
                       std::vector<Boid> const& boids,
-                      float separation_radius);  // update boids
+                      float separation_radius );  // update boids
 
-  void UpdateRotation();                         // trying rotation
+  void UpdateRotation();                           // trying rotation
 
   sf::Vector2<float> Cohesion(std::vector<Boid> const& boids);
   // first try cohesion

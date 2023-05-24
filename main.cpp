@@ -9,10 +9,10 @@ int main() {
   std::vector<bd::Boid> boids;
 
   // separation parameters
-  float separation_radius = 100.0f;  // Adjust the value as per your requirement
+  float separation_radius = 20.0f;  // Adjust the value as per your requirement
 
   // generate boids
-  for (int i = 0; i < 40; ++i) {
+  for (int i = 0; i < 150; ++i) {
     // added static cast
 
     sf::Vector2<float> pos = {static_cast<float>(rand() % 1600),

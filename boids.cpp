@@ -52,12 +52,12 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
   // adding align
   sf::Vector2<float> alignmentDirection = Alignment(boids);
-  velocity_ += alignmentDirection * /*alignment_strength*/ (0.0001f);
+  velocity_ += alignmentDirection * /*alignment_strength*/ (0.0005f);
 
   // adding sep
 
   sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
-  velocity_ += separationDirection * /*separation_strength*/ (0.0001f);
+  velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
   // Controlla se il boid ha superato i bordi della finestra
   if (position_.x < 0) {
