@@ -45,7 +45,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize, std::vector<Boid> c
   
 //adding cohesion
 sf::Vector2<float> cohesionDirection = Cohesion(boids);
-velocity_ += cohesionDirection * /*cohesion_strength*/ (1.f);
+velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00001f);
 
 
 

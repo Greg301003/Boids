@@ -73,29 +73,29 @@ CMakeFiles/boids.dir/boids.cpp.o: CMakeFiles/boids.dir/flags.make
 CMakeFiles/boids.dir/boids.cpp.o: /Users/greg/labs/boids/boids.cpp
 CMakeFiles/boids.dir/boids.cpp.o: CMakeFiles/boids.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/greg/labs/boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/boids.dir/boids.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/boids.cpp.o -MF CMakeFiles/boids.dir/boids.cpp.o.d -o CMakeFiles/boids.dir/boids.cpp.o -c /Users/greg/labs/boids/boids.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/boids.cpp.o -MF CMakeFiles/boids.dir/boids.cpp.o.d -o CMakeFiles/boids.dir/boids.cpp.o -c /Users/greg/labs/boids/boids.cpp
 
 CMakeFiles/boids.dir/boids.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/boids.dir/boids.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/boids/boids.cpp > CMakeFiles/boids.dir/boids.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/boids/boids.cpp > CMakeFiles/boids.dir/boids.cpp.i
 
 CMakeFiles/boids.dir/boids.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/boids.dir/boids.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/boids/boids.cpp -o CMakeFiles/boids.dir/boids.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/boids/boids.cpp -o CMakeFiles/boids.dir/boids.cpp.s
 
 CMakeFiles/boids.dir/main.cpp.o: CMakeFiles/boids.dir/flags.make
 CMakeFiles/boids.dir/main.cpp.o: /Users/greg/labs/boids/main.cpp
 CMakeFiles/boids.dir/main.cpp.o: CMakeFiles/boids.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/greg/labs/boids/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/boids.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/main.cpp.o -MF CMakeFiles/boids.dir/main.cpp.o.d -o CMakeFiles/boids.dir/main.cpp.o -c /Users/greg/labs/boids/main.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/boids.dir/main.cpp.o -MF CMakeFiles/boids.dir/main.cpp.o.d -o CMakeFiles/boids.dir/main.cpp.o -c /Users/greg/labs/boids/main.cpp
 
 CMakeFiles/boids.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/boids.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/boids/main.cpp > CMakeFiles/boids.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/greg/labs/boids/main.cpp > CMakeFiles/boids.dir/main.cpp.i
 
 CMakeFiles/boids.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/boids.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/boids/main.cpp -o CMakeFiles/boids.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/greg/labs/boids/main.cpp -o CMakeFiles/boids.dir/main.cpp.s
 
 # Object files for target boids
 boids_OBJECTS = \
