@@ -12,7 +12,7 @@ int main() {
   float separation_radius = 25.0f;  // Adjust the value as per your requirement
 
   // generate boids
-  for (int i = 0; i < 150; ++i) {
+  for (int i = 0; i < 50; ++i) {
     // added static cast
 
     sf::Vector2<float> pos = {static_cast<float>(rand() % 1600),
@@ -22,7 +22,9 @@ int main() {
 
     // adding rotation speed
     double rotation_speed = static_cast<double>(1.0);
-    bd::Boid boid(pos, vel, rotation_speed);
+
+    // create bird1 type boids
+    bd::Boid boid(pos, vel, rotation_speed, bd::Boid::BoidBehavior::Bird1);
     boids.push_back(boid);
   }
 

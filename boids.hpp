@@ -15,7 +15,7 @@ class Boid {
  public:
   // differen types of boids
 
-  /* enum class BoidBehavior {
+  enum class BoidBehavior {
          Bird1,
          Bird2
        //  , Predator
@@ -24,10 +24,10 @@ class Boid {
 
      BoidBehavior behavior_;
 
- */
+ 
 
   Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
-       double rotation_speed);  // constructor
+       double rotation_speed, BoidBehavior behavior);  // constructor
 
   ////sf::Vector2<float> GetPosition(Boid const&);  // ritorna la posizione del
   /// boid

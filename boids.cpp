@@ -10,12 +10,12 @@ float maxVelocity = 0.1f;
 
 float dampingFactor = 0.99999f;
 
-bd::Boid::Boid(
-    sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
-    double rotation_speed /*, BoidBehavior behavior*/)  // constructor
+bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
+               double rotation_speed, BoidBehavior behavior)  // constructor
     : position_{pos},
       velocity_{vel},
-      rotation_speed_{rotation_speed} /*, behavior_{behavior}*/ {
+      rotation_speed_{rotation_speed},
+      behavior_{behavior} {
   // create boid triangle shape so that we know where they're pointing
 
   shape_.setPointCount(4);
@@ -49,6 +49,14 @@ void bd::Boid::Draw(sf::RenderWindow& window) const { window.draw(shape_); }
 void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
                               std::vector<Boid> const& boids,
                               float separation_radius) {
+
+
+//boid type
+
+  switch (behavior_) {
+    case BoidBehavior::Bird1:
+      // Comportamento specifico per bird1
+
   // adding cohesion
   sf::Vector2<float> cohesionDirection = Cohesion(boids);
   velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
@@ -86,6 +94,23 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
   velocity_ *= dampingFactor;
 
   position_ += velocity_;
+
+
+      break;
+  /*  case BoidBehavior::Bird2:
+      // Comportamento specifico per bird2
+
+
+
+
+
+      break;*/
+  }
+
+
+
+
+
 }
 
 void bd::Boid::UpdateRotation() {
