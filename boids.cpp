@@ -6,10 +6,6 @@
 
 float maxVelocity = 0.1f;
 
-// and a damping factor to mitigate the vel
-
-float dampingFactor = 0.99999f;
-
 bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
                double rotation_speed, BoidBehavior behavior)  // constructor
     : position_{pos},
@@ -108,9 +104,6 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
         velocity_ = bd::Boid::Normalize(velocity_) * maxVelocity;
       }
 
-      // mitigate vel
-      velocity_ *= dampingFactor;
-
       position_ += velocity_;
 
       break;
@@ -130,10 +123,11 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       // separation_radius);
       velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
-      // Add repulsion behavior
+      // std::cout<<'1...'<< velocity_;
+      //  Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
-
-      // Controlla se il boid ha superato i bordi della finestra
+      // std::cout<<"2... "<<velocity_;
+      //  Controlla se il boid ha superato i bordi della finestra
       if (position_.x < 0) {
         position_.x += windowSize.x;
       } else if (position_.x > windowSize.x) {
@@ -152,9 +146,6 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       if (std::hypot(velocity_.x, velocity_.y) > maxVelocity) {
         velocity_ = bd::Boid::Normalize(velocity_) * maxVelocity;
       }
-
-      // mitigate vel
-      velocity_ *= dampingFactor;
 
       position_ += velocity_;
 
