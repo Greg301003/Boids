@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/greg/labs/Boids/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-12  -isystem /opt/homebrew/include  -Wall -Wextra -g -fsanitize=address,undefined -fno-omit-frame-pointer -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -std=gnu++17 -o CMakeFiles/boids.dir/boids.cpp.o -c /Users/greg/labs/Boids/boids.cpp",
+  "file": "/Users/greg/labs/Boids/boids.cpp"
+},
+{
+  "directory": "/Users/greg/labs/Boids/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-12  -isystem /opt/homebrew/include  -Wall -Wextra -g -fsanitize=address,undefined -fno-omit-frame-pointer -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -std=gnu++17 -o CMakeFiles/boids.dir/main.cpp.o -c /Users/greg/labs/Boids/main.cpp",
+  "file": "/Users/greg/labs/Boids/main.cpp"
+}
+]

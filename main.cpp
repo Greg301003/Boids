@@ -15,7 +15,7 @@ std::vector<bd::Boid> bird2Boids;
   // separation parameters
   float separation_radius = 25.0f;  // Adjust the value as per your requirement
 
-float repulsion_radius = 100.0f;
+float repulsion_radius = 200.0f;
 
   // generate boids
   /*for (int i = 0; i < 50; ++i) {

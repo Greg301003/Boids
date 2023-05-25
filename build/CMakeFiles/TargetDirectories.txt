@@ -1,0 +1,3 @@
+/Users/greg/labs/Boids/build/CMakeFiles/boids.dir
+/Users/greg/labs/Boids/build/CMakeFiles/edit_cache.dir
+/Users/greg/labs/Boids/build/CMakeFiles/rebuild_cache.dir

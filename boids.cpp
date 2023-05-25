@@ -79,14 +79,14 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding align
 
-      velocity_ += alignmentDirection * /*alignment_strength*/ (0.0005f);
+      velocity_ += alignmentDirection * /*alignment_strength*/ (0.0004f);
 
       // adding sep
 
       velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
       // Add repulsion behavior
-      velocity_ += repulsionDirection * /*repulsion_strength*/ (0.1f);
+      velocity_ += repulsionDirection * /*repulsion_strength*/ (1000000000000000000000000000.0f);
       
 
       // Controlla se il boid ha superato i bordi della finestra
@@ -133,7 +133,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
       // Add repulsion behavior
-      velocity_ += repulsionDirection * /*repulsion_strength*/ (10.0f);
+      velocity_ += repulsionDirection * /*repulsion_strength*/ (1000000000000000000000000000.0f);
       
 
       // Controlla se il boid ha superato i bordi della finestra
