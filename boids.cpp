@@ -4,7 +4,7 @@
 
 // adding a max velocity
 
-float maxVelocity = 0.1f;
+float maxVelocity = 0.05f;
 
 bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
                double rotation_speed, BoidBehavior behavior)  // constructor
@@ -71,7 +71,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding cohesion
 
-      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
+      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00002f);
 
       // adding align
 
@@ -79,7 +79,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding sep
 
-      velocity_ += separationDirection * /*separation_strength*/ (0.01f);
+      velocity_ += separationDirection * /*separation_strength*/ (0.00009f);
 
       // Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
@@ -112,21 +112,19 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       // Comportamento specifico per bird2
       // adding cohesion
 
-      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
+
+      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00002f);
 
       // adding align
 
-      velocity_ += alignmentDirection * /*alignment_strength*/ (0.0005f);
+      velocity_ += alignmentDirection * /*alignment_strength*/ (0.0004f);
 
       // adding sep
 
-      // separation_radius);
-      velocity_ += separationDirection * /*separation_strength*/ (0.01f);
+      velocity_ += separationDirection * /*separation_strength*/ (0.00009f);
 
-      // std::cout<<'1...'<< velocity_;
-      //  Add repulsion behavior
+      // Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
-      // std::cout<<"2... "<<velocity_;
       //  Controlla se il boid ha superato i bordi della finestra
       if (position_.x < 0) {
         position_.x += windowSize.x;

@@ -13,7 +13,7 @@ int main() {
   std::vector<bd::Boid> bird2Boids;
 
   // separation parameters
-  float separation_radius = 25.0f;  // Adjust the value as per your requirement
+  float separation_radius = 40.0f;  // Adjust the value as per your requirement
 
   float repulsion_radius = 50.0f;
 
