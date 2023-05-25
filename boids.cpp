@@ -10,9 +10,12 @@ float maxVelocity = 0.1f;
 
 float dampingFactor = 0.99999f;
 
-bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
-               double rotation_speed, BoidBehavior behavior)  // constructor
-    : position_{pos}, velocity_{vel}, rotation_speed_{rotation_speed} , behavior_{behavior}{
+bd::Boid::Boid(
+    sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
+    double rotation_speed /*, BoidBehavior behavior*/)  // constructor
+    : position_{pos},
+      velocity_{vel},
+      rotation_speed_{rotation_speed} /*, behavior_{behavior}*/ {
   // create boid triangle shape so that we know where they're pointing
 
   shape_.setPointCount(4);
@@ -89,7 +92,7 @@ void bd::Boid::UpdateRotation() {
   double angle = std::atan2(velocity_.y, velocity_.x);
   // adding rotation speed
   shape_.setRotation((static_cast<float>(angle * 180.0 / M_PI) +
-                     static_cast<float>(rotation_speed_)));
+                      static_cast<float>(rotation_speed_)));
 }
 
 // try cohesion

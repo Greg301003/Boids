@@ -13,22 +13,18 @@ class Boid {
   double rotation_speed_;
 
  public:
+  // differen types of boids
+
+  /* enum class BoidBehavior {
+         Bird1,
+         Bird2
+       //  , Predator
+     };
 
 
-//differen types of boids
+     BoidBehavior behavior_;
 
-
-  enum class BoidBehavior {
-        Bird1,
-        Bird2
-      //  , Predator
-    };
-
-    
-    BoidBehavior behavior_;
-
-
-
+ */
 
   Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
        double rotation_speed);  // constructor
@@ -48,9 +44,9 @@ class Boid {
 
   void UpdatePosition(sf::Vector2<float> windowSize,
                       std::vector<Boid> const& boids,
-                      float separation_radius );  // update boids
+                      float separation_radius);  // update boids
 
-  void UpdateRotation();                           // trying rotation
+  void UpdateRotation();                         // trying rotation
 
   sf::Vector2<float> Cohesion(std::vector<Boid> const& boids);
   // first try cohesion
