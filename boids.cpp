@@ -70,7 +70,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
    sf::Vector2<float> alignmentDirection = Alignment(boids);
 
-   sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
+   sf::Vector2<float> separationDirection = Separation(boids, separation_radius, currentGroup);
 
 //boid type
 
@@ -245,7 +245,7 @@ sf::Vector2<float> bd::Boid::Normalize(sf::Vector2<float> const& vector) {
 
 // def sep
 sf::Vector2<float> bd::Boid::Separation(std::vector<Boid> const& boids,
-                                        float separationRadius) {
+                                        float separationRadius, std::vector<Boid> const& currentGroup) {
   sf::Vector2<float> separationDirection(0.0f, 0.0f);
 
   for (auto const& boid : boids) {

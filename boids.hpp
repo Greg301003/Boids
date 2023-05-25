@@ -61,7 +61,7 @@ class Boid {
   // adding sep
 
   sf::Vector2<float> Separation(std::vector<Boid> const& boids,
-                                float separationRadius);
+                                float separationRadius, std::vector<Boid> const& currentGroup);
 };
 }  // namespace bd
 
