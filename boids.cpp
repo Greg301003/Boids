@@ -18,7 +18,7 @@ bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
   shape_.setPoint(0, sf::Vector2<float>(20, 0));
   shape_.setPoint(1, sf::Vector2<float>(0, -8));
   shape_.setPoint(2, sf::Vector2<float>(5, 0));
-  shape_.setPoint(3, sf::Vector2<float>(0, 8));
+  shape_.setPoint(3, sf::Vector2<float>(0,8));
   shape_.setPosition(position_.x, position_.y);
   // sf::Color color(60, 60, 255, 180);  // light blue
   // shape_.setFillColor(color);
