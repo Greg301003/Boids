@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <iostream>
 #include <vector>
 
 namespace bd {
@@ -17,15 +18,12 @@ class Boid {
   // differen types of boids
 
   enum class BoidBehavior {
-         Bird1,
-         Bird2
-       //  , Predator
-     };
+    Bird1,
+    Bird2
+    //  , Predator
+  };
 
-
-     BoidBehavior behavior_;
-
- 
+  BoidBehavior behavior_;
 
   Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
        double rotation_speed, BoidBehavior behavior);  // constructor
@@ -44,10 +42,10 @@ class Boid {
   void Draw(sf::RenderWindow& window) const;  // draw boid
 
   void UpdatePosition(sf::Vector2<float> windowSize,
-                      std::vector<Boid> const& boids,
-                      float separation_radius, float repulsion_radius);  // update boids
+                      std::vector<Boid> const& boids, float separation_radius,
+                      float repulsion_radius);  // update boids
 
-  void UpdateRotation();                         // trying rotation
+  void UpdateRotation();                        // trying rotation
 
   sf::Vector2<float> Cohesion(std::vector<Boid> const& boids);
   // first try cohesion
@@ -64,8 +62,7 @@ class Boid {
                                 float separationRadius);
 
   sf::Vector2<float> Repulsion(std::vector<Boid> const& boids,
-                                float repulsionRadius);
-
+                               float repulsionRadius);
 };
 }  // namespace bd
 

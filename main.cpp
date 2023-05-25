@@ -6,16 +6,16 @@ int main() {
   sf::RenderWindow window(sf::VideoMode(1600, 1400), "Boids Simulation");
 
   // create a vector of boids
-  //std::vector<bd::Boid> boids;
+  // std::vector<bd::Boid> boids;
 
-//create two types of boids
+  // create two types of boids
   std::vector<bd::Boid> bird1Boids;
-std::vector<bd::Boid> bird2Boids;
+  std::vector<bd::Boid> bird2Boids;
 
   // separation parameters
   float separation_radius = 25.0f;  // Adjust the value as per your requirement
 
-float repulsion_radius = 50.0f;
+  float repulsion_radius = 50.0f;
 
   // generate boids
   /*for (int i = 0; i < 50; ++i) {
@@ -34,26 +34,23 @@ float repulsion_radius = 50.0f;
     boids.push_back(boid);
   }*/
 
-for (int i = 0; i < 50; ++i) {
-  // Genera i boid di tipo "bird1"
-  sf::Vector2<float> pos = {static_cast<float>(rand() % 1600),
-                            static_cast<float>(rand() % 1400)};
-  sf::Vector2<float> vel = {static_cast<float>(((rand() % 5) - 2.5) / 100),
-                            static_cast<float>(((rand() % 5) - 2.5) / 100)};
-  bd::Boid bird1(pos, vel, 1.0, bd::Boid::BoidBehavior::Bird1);
-  bird1Boids.push_back(bird1);
+  for (int i = 0; i < 50; ++i) {
+    // Genera i boid di tipo "bird1"
+    sf::Vector2<float> pos = {static_cast<float>(rand() % 1600),
+                              static_cast<float>(rand() % 1400)};
+    sf::Vector2<float> vel = {static_cast<float>(((rand() % 5) - 2.5) / 100),
+                              static_cast<float>(((rand() % 5) - 2.5) / 100)};
+    bd::Boid bird1(pos, vel, 1.0, bd::Boid::BoidBehavior::Bird1);
+    bird1Boids.push_back(bird1);
 
-  // Genera i boid di tipo "bird2"
-  pos = {static_cast<float>(rand() % 1600), static_cast<float>(rand() % 1400)};
-  vel = {static_cast<float>(((rand() % 5) - 2.5) / 100),
-         static_cast<float>(((rand() % 5) - 2.5) / 100)};
-  bd::Boid bird2(pos, vel, 1.0, bd::Boid::BoidBehavior::Bird2);
-  bird2Boids.push_back(bird2);
-}
-
-
-
-
+    // Genera i boid di tipo "bird2"
+    pos = {static_cast<float>(rand() % 1600),
+           static_cast<float>(rand() % 1400)};
+    vel = {static_cast<float>(((rand() % 5) - 2.5) / 100),
+           static_cast<float>(((rand() % 5) - 2.5) / 100)};
+    bd::Boid bird2(pos, vel, 1.0, bd::Boid::BoidBehavior::Bird2);
+    bird2Boids.push_back(bird2);
+  }
 
   while (window.isOpen())  // loop
   {
@@ -77,36 +74,33 @@ for (int i = 0; i < 50; ++i) {
     }
 */
 
+    for (auto& bird1 : bird1Boids) {
+      bird1.UpdatePosition(windowSize, bird1Boids, separation_radius,
+                           repulsion_radius);
+      bird1.UpdateRotation();
+    }
 
-for (auto& bird1 : bird1Boids) {
-  bird1.UpdatePosition(windowSize, bird1Boids, separation_radius, repulsion_radius);
-  bird1.UpdateRotation();
-}
+    for (auto& bird2 : bird2Boids) {
+      bird2.UpdatePosition(windowSize, bird2Boids, separation_radius,
+                           repulsion_radius);
+      bird2.UpdateRotation();
+    }
 
-for (auto& bird2 : bird2Boids) {
-  bird2.UpdatePosition(windowSize, bird2Boids, separation_radius, repulsion_radius);
-  bird2.UpdateRotation();
-}
-
-
-
-// Disegna i boid di tipo "bird1"
-for (auto const& boid : bird1Boids) {
-  boid.Draw(window);
-}
-
-// Disegna i boid di tipo "bird2"
-for (auto const& boid : bird2Boids) {
-  boid.Draw(window);
-}
-
-
-
-  /* // draw boids
-    for (auto const& boid : boids) {
+    // Disegna i boid di tipo "bird1"
+    for (auto const& boid : bird1Boids) {
       boid.Draw(window);
     }
-*/
+
+    // Disegna i boid di tipo "bird2"
+    for (auto const& boid : bird2Boids) {
+      boid.Draw(window);
+    }
+
+    /* // draw boids
+      for (auto const& boid : boids) {
+        boid.Draw(window);
+      }
+  */
     window.display();
   }
 

@@ -66,7 +66,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
   sf::Vector2<float> separationDirection = Separation(boids, separation_radius);
 
- sf::Vector2<float> repulsionDirection = Repulsion(boids, repulsion_radius);
+  sf::Vector2<float> repulsionDirection = Repulsion(boids, repulsion_radius);
   // boid type
 
   switch (behavior_) {
@@ -87,7 +87,6 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
-      
 
       // Controlla se il boid ha superato i bordi della finestra
       if (position_.x < 0) {
@@ -119,22 +118,20 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
     case BoidBehavior::Bird2:
       // Comportamento specifico per bird2
       // adding cohesion
-      
+
       velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
 
       // adding align
-     
+
       velocity_ += alignmentDirection * /*alignment_strength*/ (0.0005f);
 
       // adding sep
 
-     
       // separation_radius);
       velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
       // Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
-      
 
       // Controlla se il boid ha superato i bordi della finestra
       if (position_.x < 0) {
@@ -255,18 +252,19 @@ sf::Vector2<float> bd::Boid::Separation(std::vector<Boid> const& boids,
   return separationDirection;
 }
 
-
-
-
 sf::Vector2<float> bd::Boid::Repulsion(std::vector<Boid> const& boids,
                                        float repulsionRadius) {
   sf::Vector2<float> repulsionDirection(0.0f, 0.0f);
 
   for (auto const& boid : boids) {
-    if (&boid != this && boid.behavior_ != behavior_) {  // Check for different boid type
+    if (&boid != this &&
+        boid.behavior_ != behavior_) {  // Check for different boid type
       double distance = Distance(*this, boid);
       if (distance < repulsionRadius) {
-        sf::Vector2<float> direction = boid.GetPosition() - position_;  // Subtract positions to get direction away from the nearby boid
+        sf::Vector2<float> direction =
+            boid.GetPosition() -
+            position_;  // Subtract positions to get direction away from the
+                        // nearby boid
         direction = Normalize(direction);
         repulsionDirection += direction;
       }
