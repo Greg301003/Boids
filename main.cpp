@@ -15,7 +15,7 @@ std::vector<bd::Boid> bird2Boids;
   // separation parameters
   float separation_radius = 25.0f;  // Adjust the value as per your requirement
 
-
+float repulsion_radius = 100.0f;
 
   // generate boids
   /*for (int i = 0; i < 50; ++i) {
@@ -79,12 +79,12 @@ for (int i = 0; i < 50; ++i) {
 
 
 for (auto& bird1 : bird1Boids) {
-  bird1.UpdatePosition(windowSize, bird1Boids, separation_radius);
+  bird1.UpdatePosition(windowSize, bird1Boids, separation_radius, repulsion_radius);
   bird1.UpdateRotation();
 }
 
 for (auto& bird2 : bird2Boids) {
-  bird2.UpdatePosition(windowSize, bird2Boids, separation_radius);
+  bird2.UpdatePosition(windowSize, bird2Boids, separation_radius, repulsion_radius);
   bird2.UpdateRotation();
 }
 

@@ -45,7 +45,7 @@ class Boid {
 
   void UpdatePosition(sf::Vector2<float> windowSize,
                       std::vector<Boid> const& boids,
-                      float separation_radius);  // update boids
+                      float separation_radius, float repulsion_radius);  // update boids
 
   void UpdateRotation();                         // trying rotation
 
@@ -61,7 +61,11 @@ class Boid {
   // adding sep
 
   sf::Vector2<float> Separation(std::vector<Boid> const& boids,
-                                float separationRadius, std::vector<Boid> const& currentGroup);
+                                float separationRadius);
+
+  sf::Vector2<float> Repulsion(std::vector<Boid> const& boids,
+                                float repulsionRadius);
+
 };
 }  // namespace bd
 
