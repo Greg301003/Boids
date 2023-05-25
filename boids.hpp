@@ -11,6 +11,7 @@ class Boid {
   sf::Vector2<float> velocity_{};
   sf::ConvexShape shape_;
   double rotation_speed_;
+  sf::Color color_;
 
  public:
   // differen types of boids
