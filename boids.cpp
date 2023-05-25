@@ -29,7 +29,7 @@ bd::Boid::Boid(sf::Vector2<float> const& pos, sf::Vector2<float> const& vel,
 
   switch (behavior_) {
     case BoidBehavior::Bird1:
-      color_ = sf::Color(60, 60, 255, 180);  // Rosso
+      color_ = sf::Color(60, 60, 255, 180);  // light blue
       break;
     case BoidBehavior::Bird2:
       color_ = sf::Color(0, 255, 0);  // Verde
@@ -75,18 +75,18 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding cohesion
 
-      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
+      //velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
 
       // adding align
 
-      velocity_ += alignmentDirection * /*alignment_strength*/ (0.0004f);
+     // velocity_ += alignmentDirection * /*alignment_strength*/ (0.0004f);
 
       // adding sep
 
-      velocity_ += separationDirection * /*separation_strength*/ (0.01f);
+      //velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
       // Add repulsion behavior
-      velocity_ += repulsionDirection * /*repulsion_strength*/ (1000000000000000000000000000.0f);
+      velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
       
 
       // Controlla se il boid ha superato i bordi della finestra
@@ -120,20 +120,20 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       // Comportamento specifico per bird2
       // adding cohesion
       // sf::Vector2<float> cohesionDirection = Cohesion(boids);
-      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
+     // velocity_ += cohesionDirection * /*cohesion_strength*/ (0.0001f);
 
       // adding align
       // sf::Vector2<float> alignmentDirection = Alignment(boids);
-      velocity_ += alignmentDirection * /*alignment_strength*/ (0.0005f);
+      //velocity_ += alignmentDirection * /*alignment_strength*/ (0.0005f);
 
       // adding sep
 
       // sf::Vector2<float> separationDirection = Separation(boids,
       // separation_radius);
-      velocity_ += separationDirection * /*separation_strength*/ (0.01f);
+      //velocity_ += separationDirection * /*separation_strength*/ (0.01f);
 
       // Add repulsion behavior
-      velocity_ += repulsionDirection * /*repulsion_strength*/ (1000000000000000000000000000.0f);
+      velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
       
 
       // Controlla se il boid ha superato i bordi della finestra
@@ -266,7 +266,7 @@ sf::Vector2<float> bd::Boid::Repulsion(std::vector<Boid> const& boids,
     if (&boid != this && boid.behavior_ != behavior_) {  // Check for different boid type
       double distance = Distance(*this, boid);
       if (distance < repulsionRadius) {
-        sf::Vector2<float> direction = position_ - boid.GetPosition();
+        sf::Vector2<float> direction = boid.GetPosition() - position_;  // Subtract positions to get direction away from the nearby boid
         direction = Normalize(direction);
         repulsionDirection += direction;
       }
