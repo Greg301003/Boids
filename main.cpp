@@ -12,8 +12,13 @@ int main() {
   std::vector<bd::Boid> bird1Boids;
   std::vector<bd::Boid> bird2Boids;
 
+
+  std::vector<bd::Boid> allBoids;
+allBoids.insert(allBoids.end(), bird1Boids.begin(), bird1Boids.end());
+allBoids.insert(allBoids.end(), bird2Boids.begin(), bird2Boids.end());
+
   // separation parameters
-  float separation_radius = 40.0f;  // Adjust the value as per your requirement
+  float separation_radius = 25.0f;  // Adjust the value as per your requirement
 
   float repulsion_radius = 50.0f;
 
@@ -84,6 +89,12 @@ int main() {
       bird2.UpdatePosition(windowSize, bird2Boids, separation_radius,
                            repulsion_radius);
       bird2.UpdateRotation();
+    }
+
+    for (auto& boid : allBoids){
+      boid.Repulsion(allBoids, repulsion_radius);
+    //  bird2.Repulsion(allBoids, repulsion_radius);
+
     }
 
     // Disegna i boid di tipo "bird1"

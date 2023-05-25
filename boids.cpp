@@ -123,7 +123,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       velocity_ += separationDirection * /*separation_strength*/ (0.00009f);
 
       // Add repulsion behavior
-      velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
+      velocity_ += repulsionDirection * /*repulsion_strength*/ (0.01f);
       //  Controlla se il boid ha superato i bordi della finestra
       if (position_.x < 0) {
         position_.x += windowSize.x;
@@ -249,10 +249,9 @@ sf::Vector2<float> bd::Boid::Repulsion(std::vector<Boid> const& boids,
         boid.behavior_ != behavior_) {  // Check for different boid type
       double distance = Distance(*this, boid);
       if (distance < repulsionRadius) {
-        sf::Vector2<float> direction =
-            boid.GetPosition() -
-            position_;  // Subtract positions to get direction away from the
-                        // nearby boid
+        sf::Vector2<float> direction = position_ - boid.GetPosition();
+        //- position_;  // Subtract positions to get direction away from the
+        // nearby boid
         direction = Normalize(direction);
         repulsionDirection += direction;
       }
