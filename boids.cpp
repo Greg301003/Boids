@@ -71,7 +71,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding cohesion
 
-      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00002f);
+      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.000017f);
 
       // adding align
 
@@ -79,7 +79,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding sep
 
-      velocity_ += separationDirection * /*separation_strength*/ (0.00009f);
+      velocity_ += separationDirection * /*separation_strength*/ (0.000095f);
 
       // Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (1.0f);
@@ -112,7 +112,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
       // Comportamento specifico per bird2
       // adding cohesion
 
-      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.00002f);
+      velocity_ += cohesionDirection * /*cohesion_strength*/ (0.000017f);
 
       // adding align
 
@@ -120,7 +120,7 @@ void bd::Boid::UpdatePosition(sf::Vector2<float> windowSize,
 
       // adding sep
 
-      velocity_ += separationDirection * /*separation_strength*/ (0.00009f);
+      velocity_ += separationDirection * /*separation_strength*/ (0.000095f);
 
       // Add repulsion behavior
       velocity_ += repulsionDirection * /*repulsion_strength*/ (0.01f);
